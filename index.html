@@ -1,105 +1,230 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>LEWOINT | Vente de comptes streaming</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* ===== Style CSS intégré ===== */
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: "Segoe UI", Arial, sans-serif; background: radial-gradient(circle at top, #020617, #000); color: #f8fafc; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEWOINT | Vente de comptes streaming</title>
 
-        header.hero { text-align:center; padding:70px 20px; background: linear-gradient(135deg, #020617, #020617); }
-        header.hero h1 { font-size:42px; color:#e11d48; letter-spacing:2px; }
-        header.hero p { margin:12px 0 25px; color:#cbd5f5; }
-        header.hero .btn { display:inline-block; background:#e11d48; color:#fff; padding:14px 28px; border-radius:30px; text-decoration:none; font-weight:bold; transition:0.3s; }
-        header.hero .btn:hover { background:#be123c; transform:scale(1.05); }
+<style>
+:root{
+  --main:#e50914;
+  --dark:#111;
+  --light:#fff;
+  --gray:#222;
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+body{background:#0f0f0f;color:#fff}
 
-        main.content { max-width:1200px; margin:auto; padding:40px 20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; }
-        section.box { background: rgba(2,6,23,0.9); border-radius:16px; padding:25px; border:1px solid #1e293b; box-shadow:0 20px 40px rgba(0,0,0,0.5); }
-        section.box h2 { color:#38bdf8; margin-bottom:15px; }
-        section.box h3 { margin-top:15px; color:#e11d48; }
-        section.box ul { list-style:none; margin-top:10px; }
-        section.box ul li { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed #334155; font-size:15px; }
-        section.box ul li span { color:#22c55e; font-weight:bold; }
-        section.box p.note { font-size:14px; color:#cbd5f5; margin-bottom:10px; }
+header{
+  background:linear-gradient(135deg,#e50914,#b00610);
+  padding:20px;
+  text-align:center;
+}
+header h1{font-size:32px;font-weight:bold}
+header p{opacity:.9}
 
-        footer { text-align:center; padding:40px 20px; background:#020617; border-top:2px solid #e11d48; }
-        footer a.footer-link { display:inline-block; margin:10px 0; color:#38bdf8; font-weight:bold; text-decoration:none; }
-        footer a.footer-link:hover { text-decoration:underline; }
-        footer p.copy { margin-top:15px; font-size:13px; color:#94a3b8; }
-    </style>
+.container{max-width:1200px;margin:auto;padding:20px}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#181818;
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-5px)}
+.card h3{color:#e50914;margin-bottom:10px}
+.card p{font-size:14px;opacity:.9;margin-bottom:6px}
+.price{font-weight:bold;margin:8px 0}
+
+button{
+  background:var(--main);
+  border:none;
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+button:hover{opacity:.85}
+
+.cart{
+  margin-top:40px;
+  background:#181818;
+  border-radius:12px;
+  padding:20px;
+}
+.cart h2{margin-bottom:15px}
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+  border-bottom:1px solid #333;
+  padding-bottom:8px;
+}
+.cart-item span{font-size:14px}
+.qty button{
+  padding:4px 8px;
+  margin:0 4px;
+}
+.remove{background:#444}
+
+.cart-total{margin-top:15px;font-weight:bold}
+
+.cart-actions{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+.whatsapp{background:#25D366}
+.facebook{background:#1877f2}
+
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:.6;
+  font-size:13px;
+}
+</style>
 </head>
+
 <body>
 
-<header class="hero">
-    <h1>WOINT</h1>
-    <p>Vente de comptes Streaming Premium</p>
-    <a href="https://www.facebook.com/profile.php?id=61585196918129" target="_blank" class="btn">
-        📩 Commander maintenant
-    </a>
+<header>
+  <h1>LEWOINT</h1>
+  <p>Vente de comptes streaming premium</p>
 </header>
 
-<main class="content">
+<div class="container">
 
-    <section class="box">
-        <h2>🍿 Netflix</h2>
-        <h3>Premium 4K UHD</h3>
-        <ul>
-            <li>1 mois • 1 écran <span>18 500 Ar</span></li>
-            <li>1 mois • 5 écrans (personnel) <span>75 000 Ar</span></li>
-        </ul>
-        <h3>Standard Full HD</h3>
-        <ul>
-            <li>1 mois • 2 écrans (personnel) <span>65 000 Ar</span></li>
-        </ul>
-        <h3>Essentiel HD</h3>
-        <ul>
-            <li>1 mois • 1 écran (personnel) <span>38 000 Ar</span></li>
-        </ul>
-    </section>
+<div class="products" id="products"></div>
 
-    <section class="box">
-        <h2>⭐ Prime Video</h2>
-        <ul>
-            <li>25–30 jours • 1 écran <span>12 500 Ar</span></li>
-            <li>1 mois • 5 écrans <span>30 000 Ar</span></li>
-            <li>3 mois • 5 écrans <span>80 000 Ar</span></li>
-            <li>6 mois • 5 écrans <span>140 000 Ar</span></li>
-            <li>12 mois • 5 écrans <span>250 000 Ar</span></li>
-        </ul>
-    </section>
+<div class="cart">
+  <h2>🛒 Panier</h2>
+  <div id="cartItems"></div>
+  <div class="cart-total" id="total"></div>
 
-    <section class="box">
-        <h2>🎌 Crunchyroll (Mega Fan)</h2>
-        <ul>
-            <li>1 mois • 1 écran <span>9 500 Ar</span></li>
-            <li>3 mois • 1 écran <span>28 500 Ar</span></li>
-            <li>6 mois • 1 écran <span>50 000 Ar</span></li>
-            <li>12 mois • 1 écran <span>90 000 Ar</span></li>
-        </ul>
-    </section>
+  <div class="cart-actions">
+    <button class="whatsapp" onclick="sendWhatsApp()">📩 Commander via WhatsApp</button>
+    <button class="facebook" onclick="goFacebook()">✅ Valider le panier</button>
+  </div>
+</div>
 
-    <section class="box">
-        <h2>🎵 Streaming Musique</h2>
-        <p class="note">Spotify Premium • Apple Music • Deezer Premium<br>(offres séparées)</p>
-        <ul>
-            <li>1 mois <span>17 500 Ar</span></li>
-            <li>3 mois <span>52 500 Ar</span></li>
-            <li>6 mois <span>95 000 Ar</span></li>
-            <li>12 mois <span>150 000 Ar</span></li>
-        </ul>
-    </section>
-
-</main>
+</div>
 
 <footer>
-    <p>Besoin d’aide ?</p>
-    <a href="https://www.facebook.com/profile.php?id=61585196918129" target="_blank" class="footer-link">
-        👉 Contactez-nous pour commander
-    </a>
-    <p class="copy">© 2025 WOINT — Tous droits réservés</p>
+  © 2025 LEWOINT — Comptes streaming premium
 </footer>
+
+<script>
+const products=[
+{n:"Netflix Premium 4K UHD - 1 mois / 1 écran",p:18500},
+{n:"Netflix Premium 4K UHD - 1 mois / 5 écrans",p:75000},
+{n:"Netflix Standard Full HD - 1 mois / 2 écrans",p:65000},
+{n:"Netflix Essentiel HD - 1 mois / 1 écran",p:38000},
+
+{n:"Prime Video - 25 à 30 jours / 1 écran",p:12500},
+{n:"Prime Video - 1 mois / 5 écrans",p:30000},
+{n:"Prime Video - 3 mois / 5 écrans",p:80000},
+{n:"Prime Video - 6 mois / 5 écrans",p:140000},
+{n:"Prime Video - 12 mois / 5 écrans",p:250000},
+
+{n:"Crunchyroll Mega Fan - 1 mois",p:9500},
+{n:"Crunchyroll Mega Fan - 3 mois",p:28500},
+{n:"Crunchyroll Mega Fan - 6 mois",p:50000},
+{n:"Crunchyroll Mega Fan - 12 mois",p:90000},
+
+{n:"Spotify Premium - 1 mois",p:17500},
+{n:"Spotify Premium - 3 mois",p:52500},
+{n:"Spotify Premium - 6 mois",p:95000},
+{n:"Spotify Premium - 12 mois",p:150000},
+
+{n:"Apple Music - 1 mois",p:17500},
+{n:"Apple Music - 3 mois",p:52500},
+{n:"Apple Music - 6 mois",p:95000},
+{n:"Apple Music - 12 mois",p:150000},
+
+{n:"Deezer - 1 mois",p:17500},
+{n:"Deezer - 3 mois",p:52500},
+{n:"Deezer - 6 mois",p:95000},
+{n:"Deezer - 12 mois",p:150000},
+];
+
+let cart=[];
+
+const prodDiv=document.getElementById("products");
+
+products.forEach((p,i)=>{
+  prodDiv.innerHTML+=`
+  <div class="card">
+    <h3>${p.n}</h3>
+    <div class="price">${p.p.toLocaleString()} Ar</div>
+    <button onclick="addToCart(${i})">🛒 Ajouter au panier</button>
+  </div>`;
+});
+
+function addToCart(i){
+  let item=cart.find(x=>x.i===i);
+  if(item){item.q++}
+  else{cart.push({i,q:1})}
+  renderCart();
+}
+
+function renderCart(){
+  const c=document.getElementById("cartItems");
+  c.innerHTML="";
+  let total=0;
+
+  cart.forEach((it,idx)=>{
+    let pr=products[it.i];
+    total+=pr.p*it.q;
+    c.innerHTML+=`
+    <div class="cart-item">
+      <span>${pr.n}<br>${pr.p.toLocaleString()} Ar</span>
+      <div class="qty">
+        <button onclick="itChange(${idx},-1)">-</button>
+        ${it.q}
+        <button onclick="itChange(${idx},1)">+</button>
+        <button class="remove" onclick="removeItem(${idx})">❌</button>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById("total").innerText="Total : "+total.toLocaleString()+" Ar";
+}
+
+function itChange(i,v){
+  cart[i].q+=v;
+  if(cart[i].q<=0) cart.splice(i,1);
+  renderCart();
+}
+function removeItem(i){
+  cart.splice(i,1);
+  renderCart();
+}
+
+function sendWhatsApp(){
+  if(cart.length===0)return alert("Panier vide");
+  let msg="🛒 COMMANDE LEWOINT%0A";
+  cart.forEach(it=>{
+    let p=products[it.i];
+    msg+=`- ${p.n} x${it.q} = ${(p.p*it.q).toLocaleString()} Ar%0A`;
+  });
+  window.open("https://wa.me/261385123905?text="+msg,"_blank");
+}
+
+function goFacebook(){
+  window.location.href="https://www.facebook.com/profile.php?id=61585231116963";
+}
+</script>
 
 </body>
 </html>
